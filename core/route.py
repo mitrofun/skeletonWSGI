@@ -1,0 +1,3 @@
+skeleton_route = {
+    '/': 'index',
+}
