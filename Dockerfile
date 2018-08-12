@@ -17,7 +17,7 @@ RUN apk update && apk add --update --no-cache --progress \
     linux-headers \
     pcre-dev \
     && pip3 install --upgrade pip setuptools \
-    && pip3 install --no-cache-dir -r /opt/app/requirements/dev.txt
+    && pip3 install --no-cache-dir -r /opt/app/requirements.txt
 
 
 COPY deploy/nginx.conf /etc/nginx/nginx.conf
