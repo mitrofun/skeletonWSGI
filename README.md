@@ -116,7 +116,7 @@ docker build . -t skeleton
 ```
 Run docker for 80 port
 ```bash
-docker run -d -p 80:80 skeleton
+docker run --restart=always --name skeleton -p 80:80 -d skeleton
 ```
 or use custom port, for example
 ```bash
