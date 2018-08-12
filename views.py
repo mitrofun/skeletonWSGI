@@ -1,7 +1,9 @@
+# this example how use skeleton
+# uncomment this code for use custom view
+"""
 from core.context import render_content_by_view_name
 
 
-# this example how use skeleton
 def index(view_name, environ):
     context = {
         'title': 'Страница вашего проекта',
@@ -11,3 +13,13 @@ def index(view_name, environ):
     }
 
     return render_content_by_view_name(view_name, environ, context)
+
+def contacts(view_name, environ):
+    context = {
+        'title': 'Page contact',
+        'page_header': 'Our contacts',
+        'email': 'email@domain.com'
+    }
+
+    return render_content_by_view_name(view_name, environ, context)
+"""
