@@ -1,5 +1,7 @@
 skeletonWSGI
 ===
+[![Build Status](https://travis-ci.org/mitrofun/skeletonWSGI.svg?branch=master)](https://travis-ci.org/mitrofun/skeletonWSGI) [![Coverage Status](https://coveralls.io/repos/github/mitrofun/skeletonWSGI/badge.svg)](https://coveralls.io/github/mitrofun/skeletonWSGI) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mitrofun/skeletonWSGI/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mitrofun/skeletonWSGI/?branch=master)  
+
 Simple skeleton uWSGI compatible web application
 
 Installation
@@ -32,7 +34,8 @@ Let's consider the example of creating a new page, like this
 
 ![screen](docs/images/contacts.png)
 
-###Views
+Views
+---
 In `view.py` add function
 ```python
 from core.context import render_content_by_view_name
@@ -47,7 +50,8 @@ def contacts(view_name, environ):
 return render_content_by_view_name(view_name, environ, context)
 ```
 
-###Route
+Route
+---
 In `settings.py` add route for new page.
 **Important**: *the value in the directory should be called as the function in view.*
 ```python
@@ -55,7 +59,8 @@ route = {
     '/contacts' : 'contacts'
 }
 ```
-###Template
+Template
+---
 Next, create a template for the new page in folder templates, example: contacts.html
 ```html
 <!DOCTYPE html>
@@ -93,11 +98,13 @@ templates = {
 }
 ```
 
-###Variables in template
+Variables in template
+---
 You can use variables in the template.To do this, the name of the variables is framed in `{{ var_name }}` and their values are added to the context dictionary of the corresponding view
 **Important**: *the names of the variables are framed in braces with a space.*
 
-###Static in template
+Static in template
+---
 For static use the static folder or custom folder or use your folder , to do this,
 change it in the command to start uwsgi option --check-static `Name of your folder`
 
@@ -124,7 +131,6 @@ Requirements
 Contributors
 =====
 - [mitri4](https://github.com/mitrofun)
-
 
 License
 =====
