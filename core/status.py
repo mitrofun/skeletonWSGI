@@ -4,5 +4,3 @@ HTTP_400_BAD_REQUEST = 400, 'Bad Request'
 HTTP_403_FORBIDDEN = 403, 'Forbidden'
 HTTP_404_NOT_FOUND = 404, 'Not Found'
 HTTP_500_INTERNAL_SERVER_ERROR = 500, 'Internal Server Error'
-
-
